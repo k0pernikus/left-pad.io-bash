@@ -1,4 +1,4 @@
-# conume left-pad.io as bash script
+# Consume http://left-pad.io as bash script
 
 # Example:
 
