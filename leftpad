@@ -1,0 +1,11 @@
+#!/bin/bash
+. ./shflags
+
+DEFINE_string 'string' 'oswald' 'string to be padded' 's'
+DEFINE_string 'char' '@' 'character to be used to pad the sring' 'c'
+DEFINE_integer 'amount' 13 'amount of characters the string should be long in the end' 'a'
+
+FLAGS "$@" || exit 1
+eval set -- "${FLAGS_ARGV}"
+
+curl -s "https://api.left-pad.io/?str=${FLAGS_string}&len=${FLAGS_amount}&ch=${FLAGS_char}" | jq -r .str
