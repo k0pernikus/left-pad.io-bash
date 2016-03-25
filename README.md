@@ -1,6 +1,6 @@
-# conume left-pad.io as bash scrop
+# conume left-pad.io as bash script
 
-# Exanple:
+# Example:
 
 ```
 $ ./leftpad --string fnord --char @ --amount 6
